@@ -46,7 +46,7 @@ a {
 
 html,body {
   width: 100%;
-  overflow-x: hidden; /* Prevents horizontal scroll */
+  overflow-x: hidden; 
 }
 
 .round-icon {
@@ -88,4 +88,10 @@ html,body {
     --font-size-quote: 10px;
     --font-size-code: 8px;
   }
+
+  html,body {
+    width: 100%;
+    overflow-x: visible;
+  }
+
 }

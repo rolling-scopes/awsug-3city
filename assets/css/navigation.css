@@ -69,6 +69,12 @@ header img {
 .spacer {
   flex: 1;
 }
+
+.mobile {
+  visibility: hidden;
+  display: none;
+}
+
 /* #endregion */
 
 /* #region FOOTER DEFINITIONS */
@@ -164,6 +170,16 @@ header img {
 @media (max-width: 600px) {
   /* header */
   
+  .mobile {
+    visibility: visible;
+    display: flex;
+  }
+
+  .desktop {
+    visibility: hidden;
+    display: none;
+  }
+
   .logo{
     margin-left: 5px;
     width: 180px;

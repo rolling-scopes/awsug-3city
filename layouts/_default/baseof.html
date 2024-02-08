@@ -6,7 +6,10 @@
 		{{ template "_default/head.html" . }}
 	</head>
 	<body>
-		<header class="header">{{ template "_default/header.html" . }}</header>
+		<header class="header">
+			{{ template "_default/headerDesktop.html" . }}
+			{{ template "_default/headerMobile.html" . }}
+		</header>
 		<main>{{ block "main" . }}{{ end }}</main>
 		<footer class="footer">{{ template "_default/footer.html" . }}</footer>
 	</body>
