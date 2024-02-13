@@ -5,16 +5,14 @@
 <!-- List reference images for your sponsors below-->
 <!-- prettier-ignore -->
 {{ $sponsors := slice
-    (dict "name" "sponsor-1" "src" "1.png" "url" "https://www.example.com")
-    (dict "name" "sponsor-2" "src" "2.png" "url" "https://www.example.com")
-    (dict "name" "sponsor-3" "src" "3.png" "url" "https://www.example.com")
-    (dict "name" "sponsor-4" "src" "4.png" "url" "https://www.example.com")
-    (dict "name" "sponsor-5" "src" "5.png" "url" "https://www.example.com")
-  }}
+    (dict "name" "sponsor-1" "src" "epam.png" "url" "https://www.example.com")
+    (dict "name" "sponsor-2" "src" "aws.png" "url" "https://www.example.com")
+    (dict "name" "sponsor-3" "src" "rs.png" "url" "https://www.example.com")
+}}
 
 <div class="sponsors-section">
   <div class="sponsors-slogan">
-    <p>Sponsors</p>
+    <p>Partners</p>
   </div>
   <div class="sponsor-items">
     {{ range $sponsors }}
