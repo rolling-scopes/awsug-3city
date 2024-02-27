@@ -2,16 +2,32 @@
 <html
 	lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
 	dir="{{ or site.Language.LanguageDirection `ltr` }}">
-	<head>
-		{{ if eq .Site.BaseURL "https://rolling-scopes.github.io/awsug-3city/" }}
-    <base href="{{ .Site.BaseURL }}">
-  {{ else }}
-    <base href="{{ .Site.BaseURL }}/">
-  {{ end }}
-		{{ template "_default/head.html" . }}
-	</head>
+  <head>
+    {{ if eq .Site.BaseURL "https://rolling-scopes.github.io/awsug-3city/" }}
+    <base href="{{ .Site.BaseURL }}" />
+    {{ else }}
+    <base href="{{ .Site.BaseURL }}/" />
+    {{ end }} {{ template "_default/head.html" . }}
+  </head>
 	<body>
-		<header class="header">{{ template "_default/header.html" . }}</header>
+    {{ $page := . }}
+
+		<header class="header">
+			{{ template "_default/headerDesktop.html" . }}
+			{{ template "_default/headerMobile.html" . }}
+		</header>
+    <div>
+      <nav class="mobile-menu">
+          <ul class="mobile-nav-list">
+              {{ range site.Menus.main }} {{ $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }} {{
+              $active = or $active (eq .Name $page.Title) }}
+              <li {{ if $active }}class="active mobile-nav-item" {{else}}class="mobile-nav-item" {{ end }}>
+                  <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+          </ul>
+      </nav>
+    </div>
 		<main>{{ block "main" . }}{{ end }}</main>
 		<footer class="footer">{{ template "_default/footer.html" . }}</footer>
 	</body>

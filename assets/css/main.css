@@ -44,7 +44,8 @@ a {
   text-decoration: none;
 }
 
-html,body {
+html,
+body {
   width: 100%;
   overflow-x: hidden; /* Prevents horizontal scroll */
 }
@@ -70,6 +71,10 @@ html,body {
 }
 
 @media (max-width: 769px) {
+  main {
+    margin: 50px 0px 0 0;
+  }
+
   :root {
     --font-size-h1: 32px;
     --font-size-h2: 20px;
@@ -87,5 +92,11 @@ html,body {
     --font-size-sidebar: 9px;
     --font-size-quote: 10px;
     --font-size-code: 8px;
+  }
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: visible;
   }
 }

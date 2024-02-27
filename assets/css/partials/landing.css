@@ -13,19 +13,19 @@
 
 #landing-slogan {
   font-size: var(--font-size-h1);
-  font-family: "Amazon Ember";
+  font-family: 'Amazon Ember';
   font-weight: bold;
   padding: 0%;
 }
 
 #landing-sub-slogan {
   font-size: var(--font-size-h2);
-  font-family: "Amazon Ember";
+  font-family: 'Amazon Ember';
 }
 
 #landing-text {
   font-size: var(--font-size-quote);
-  font-family: "Bookerly LCD";
+  font-family: 'Bookerly LCD';
   font-weight: 300;
   line-height: 155%;
 }
@@ -40,4 +40,44 @@
   height: 100%;
   z-index: -1;
   clip-path: polygon(0 100%, 30% 0, 100% 0, 100% 100%);
+}
+
+@media (max-width: 600px) {
+  .landing-section {
+    margin-top: -50px;
+    max-height: 360px;
+  }
+
+  .landing-left {
+    width: 100%;
+    padding-top: 3%;
+    margin-left: 0;
+    padding-left: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://aws3.city/images/3city.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .landing-right {
+    display: none;
+  }
+
+  #landing-slogan {
+    font-size: var(--font-size-h2);
+    font-family: 'Amazon Ember';
+    font-weight: bold;
+    padding: 0%;
+  }
+
+  #landing-sub-slogan {
+    font-size: var(--font-size-h3);
+    font-family: 'Amazon Ember';
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
 }

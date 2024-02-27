@@ -44,7 +44,7 @@ header img {
 }
 
 .nav-item {
-  font-family: "Amazon Ember";
+  font-family: 'Amazon Ember';
   font-weight: 600;
   font-size: var(--font-size-navbar);
   letter-spacing: 2px;
@@ -62,13 +62,20 @@ header img {
   color: var(--color-primary-white);
 }
 
-.active a{
-  color: var(--color-primary-yellow)
+.active a {
+  color: var(--color-primary-yellow);
 }
 
 .spacer {
   flex: 1;
 }
+
+.mobile,
+.mobile-menu {
+  visibility: hidden;
+  display: none;
+}
+
 /* #endregion */
 
 /* #region FOOTER DEFINITIONS */
@@ -76,7 +83,7 @@ header img {
   background-color: var(--color-primary-black);
   color: var(--color-primary-white);
   padding: 5% 10%; /* vertical horizontal */
-  font-family: "Amazon Ember", sans-serif;
+  font-family: 'Amazon Ember', sans-serif;
   font-size: var(--font-size-footer);
   position: relative;
   display: flex;
@@ -84,12 +91,12 @@ header img {
 }
 
 .footer-line {
-    width: 60%;      /* Full width of the footer */
-    height: 1px;        /* Thin line */
-    background-color: var(--color-primary-gray);
-    position: absolute;
-    top: 10%;         /* Center vertically */
-    transform: translateY(-50%);
+  width: 60%; /* Full width of the footer */
+  height: 1px; /* Thin line */
+  background-color: var(--color-primary-gray);
+  position: absolute;
+  top: 10%; /* Center vertically */
+  transform: translateY(-50%);
 }
 
 .footer-column {
@@ -119,8 +126,8 @@ header img {
 }
 
 .footer-right img {
-    width: 99px;
-    height: auto;
+  width: 99px;
+  height: auto;
 }
 
 .footer-right p {
@@ -130,48 +137,123 @@ header img {
 }
 
 .footer-social-items {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
 }
 .footer-social-item {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border: white solid 1px;
-    border-radius: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: white solid 1px;
+  border-radius: 100%;
 }
 
 .footer-social-item img {
-    width: 20px;
-    height: 20px;
-
+  width: 20px;
+  height: 20px;
 }
 
 .footer-bg-image {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 320px; 
+  width: 320px;
 }
-
 
 /* #endregion */
 
 @media (max-width: 600px) {
+  .mobile {
+    padding: 10px;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .mobile-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding: 0;
+    background-color: var(--color-primary-black);
+    height: unset;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.active {
+    color: white;
+    border-top: 1px solid var(--color-primary-purple);
+    border-bottom: 1px solid var(--color-primary-purple);
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .mobile-nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .mobile-nav-item {
+    font-family: 'Amazon Ember';
+    font-weight: 600;
+    font-size: var(--font-size-navbar);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-primary-white);
+    text-align: center;
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+    color: var(--color-primary-white);
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .desktop {
+    visibility: hidden;
+    display: none;
+  }
   /* header */
-  
-  .logo{
+
+  .logo {
     margin-left: 5px;
-    width: 180px;
+    width: 80px;
+    height: auto;
+    flex: none;
+  }
+
+  header img {
+    margin-left: 2%;
+    width: 60px;
     height: auto;
   }
-.nav-item a{
-  font-size: 14px;
-}
+
+  .nav-item a {
+    font-size: 14px;
+  }
 
   /* footer  */
   .footer {
@@ -179,9 +261,7 @@ header img {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
     padding: 10% 5%; /* Increased vertical padding and reduced horizontal padding */
-    margin-bottom: 20px;
   }
 
   .footer-line {
@@ -190,20 +270,23 @@ header img {
   }
 
   .footer-column {
-    margin-bottom: 20px; /* Increased spacing between columns */
+    margin-bottom: 10px; /* Increased spacing between columns */
     align-items: center; /* Center-align items for a cleaner look */
     width: 100%; /* Full width for each column */
   }
 
   .footer-column h3 {
     margin-bottom: 5px; /* Reduced margin for header */
-    text-decoration: underline; 
-    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 800;
+    font-size: 12px;
   }
 
   .footer-column a {
-    margin-bottom: 5%; /* Reduced space between links */
-    font-size: 13px;
+    margin-bottom: 2%; /* Reduced space between links */
+    font-size: 12px;
+    font-weight: 400;
   }
 
   .footer-right {
@@ -213,17 +296,17 @@ header img {
   }
 
   .footer-right img {
-    width: 150px; /* Reduced logo size */
+    width: 50px; /* Reduced logo size */
   }
 
   .footer-right p {
     padding: 3px;
-    margin-bottom: 8px ; /* Reduced margin for paragraphs */
+    margin-bottom: 8px; /* Reduced margin for paragraphs */
     font-size: 12px;
   }
 
   .footer-social-items {
-    width: 60%; /* Adjusted width for social icons */
+    width: 100%; /* Adjusted width for social icons */
     margin-top: 10px; /* Additional spacing above social icons */
   }
 
@@ -238,13 +321,9 @@ header img {
   }
 
   .footer-bg-image {
-    width: auto;
-    margin-top: 15px; /* Hide background image on mobile for cleaner look */
+    display: none; /* Hide background image on mobile for cleaner look */
   }
 }
-
-
-
 
 /* tablest */
 
@@ -283,7 +362,7 @@ header img {
   }
 
   .footer-right img {
-    width: 180px; /* Adjust logo size */
+    width: 55px; /* Adjust logo size */
   }
 
   .footer-right p {

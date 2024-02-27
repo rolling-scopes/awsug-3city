@@ -4,44 +4,44 @@
 }
 
 .team-title {
-	font-size: var(--font-size-h3);
-	font-family: "Amazon Ember";
-	font-weight: bold;
+  font-size: var(--font-size-h3);
+  font-family: 'Amazon Ember';
+  font-weight: bold;
   text-align: center;
-	margin: 0;
-	margin-top: 2%;}
+  margin: 0;
+  margin-top: 2%;
+}
 
 .team-section {
-    padding: 0 10%;
+  padding: 0 10%;
 }
 
 .team-members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-    grid-gap: calc(var(--box-width));
-    padding: 3% 0%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-gap: calc(var(--box-width));
+  padding: 3% 0%;
 }
 
 @media screen and (max-width: 768px) {
-    .team-members {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
-        gap: 2vw; /* Adjust gap if needed */
-        padding: 5% 0;
-    }
+  .team-members {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns for smaller screens */
+    gap: 2vw; /* Adjust gap if needed */
+    padding: 5% 0;
+  }
 
-    .team-title {
-        font-size: 16px; 
-        margin-top: 5%;
-    }
-
+  .team-title {
+    font-size: 16px;
+    margin-top: 5%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .team-members {
-        grid-template-columns: repeat(3, 1fr); 
-    }
+  .team-members {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .team-title {
-        font-size: 18px; 
-    }
+  .team-title {
+    font-size: 18px;
+  }
 }
