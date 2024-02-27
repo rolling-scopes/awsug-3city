@@ -1,65 +1,84 @@
 #blogsGrid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	align-items: start;
-	justify-items: center;
-	list-style-type: none;
-	padding: 0 100px;
-	margin: 0;
-	gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  justify-items: center;
+  list-style-type: none;
+  padding: 0 100px;
+  margin: 0;
+  gap: 10px;
 }
 
 .blogObject {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-top: 50px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .blogTitle {
-	font-family: "Amazon Ember";
-	font-size: var(--font-size-name);
-	color: var(--color-primary-white);
-	justify-self: center;
-	align-self: center;
-	margin-bottom: 10px;
+  font-family: 'Amazon Ember';
+  font-size: var(--font-size-name);
+  color: var(--color-primary-white);
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 10px;
 }
 
 .blogBanner {
-	height: 300px;
-	width: 40vw;
-	object-fit: cover;
-	border: 2px solid var(--color-primary-gray);
-	border-radius: 10px;
+  height: 300px;
+  width: 40vw;
+  object-fit: cover;
+  border: 2px solid var(--color-primary-gray);
+  border-radius: 10px;
 }
 
 .blogAbstract {
-	font-family: 'Amazon Ember';
-	font-weight: 300;
-    width: 750px;
-    text-align: justify;
+  font-family: 'Amazon Ember';
+  font-weight: 300;
+  width: 750px;
+  text-align: justify;
 }
 
 .blogInfoArea {
-	display: flex;
-	flex-direction: row;
-	margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
 }
 
 .blogInfo {
-	display: flex;
-	align-items: center;
-	margin-right: 75px;
+  display: flex;
+  align-items: center;
+  margin-right: 75px;
 }
 
 .blogInfoIcon {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .blogInfoText {
-	font-family: "Amazon Ember Display";
-    font-size: var(--font-size-details);
-	margin-top: 10px;
-	margin-left: 10px;
+  font-family: 'Amazon Ember Display';
+  font-size: var(--font-size-details);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  #blogsGrid {
+    padding: 0 20px;
+  }
+
+  .blogAbstract {
+    width: auto;
+    text-align: justify;
+  }
+
+  .blogObject {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1102px) {
 }
